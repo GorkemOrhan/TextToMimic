@@ -1,16 +1,17 @@
-def text_to_viseme(text):
+def metin_to_viseme(metin):
     viseme = []
-    for letter in text.lower():
-        if letter in "aeo":
-            viseme.append("open")
-        elif letter in "mbp":
-            viseme.append("close")
+    for harf in metin.lower():
+        if harf in "aeo":
+            viseme.append("acik")
+        elif harf in "mbp":
+            viseme.append("kapali")
         else:
-            viseme.append("neutral")
+            viseme.append("notr")
     return viseme
 
 if __name__ == "__main__":
-    ornek_text = "Merhaba"
-    sonuc = text_to_viseme(ornek_text)
-    print(f"text: {ornek_text}")
+    ornek_metin = "Merhaba"
+    sonuc = metin_to_viseme(ornek_metin)
+    print(f"Metin: {ornek_metin}")
     print(f"Viseme dizisi: {sonuc}")
+
